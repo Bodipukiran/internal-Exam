@@ -1,0 +1,96 @@
+
+<html>
+<head> 
+
+<title > HI </title>
+
+<style>
+
+body{
+
+font-family : Arial;
+background-color : white;
+}
+
+form{
+
+width :325px;
+padding : 15px;
+margin-top  : 25px;
+background-color : white;
+border : 1px;
+border-radius : 5px;
+
+}
+
+label{
+
+ display : block;
+ text-align: left;
+ margin-bottom: 2px;
+ margin-top : 2px;
+ font-weight : bold;
+
+}
+
+input, select{
+
+width : 100%;
+padding : 8px;
+ border : 1px;
+ border-radius : 4px;
+ box-sizing : border-box;
+
+}
+
+button{
+
+width : 100%;
+padding : 20px;
+margin-top  : 10px;
+background-color :  green;
+border-radius : 2px;
+font-size:n 2px;
+
+}
+
+button:hover{
+ background-color : yellow;
+}
+
+</style>
+
+<script>
+
+function valid(){
+let name = document.getElementById("nam").value;
+
+if(!((/^[A-Z a-z]*$/).test(name))) {
+alert(`name not valid`);
+return false;
+}
+alert(`name is valid`);
+return true;
+
+}
+
+</script>
+
+</head>
+<body>
+
+<center>
+<form id="form" onsubmit="return valid()" >
+<label for="nam"> name </label> <br>
+<input type="text" id="nam"  required > 
+
+<label for="phone"> mobile no </label> <br>
+<input type="tel" id="phone" required pattern="[6-9][0-9]{9}" > 
+
+<button type ="submit" > Login  </button>
+
+</form>
+</center>
+
+</body>
+</html>
